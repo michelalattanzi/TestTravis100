@@ -1,0 +1,14 @@
+dist: xenial
+language: java
+jdk:
+    -openjdk8
+addons:
+  apt:
+    packages:
+      - ant
+  sonarcloud:
+    organization: "michelalattanzi"
+    token: "3303751ea47c55a26621895819aa6cd1c7b9ae62"
+script: 
+-ant build
+-sonar-scanner
